@@ -1,7 +1,7 @@
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#ifndef Contact_CLASS_HPP
+# define Contact_CLASS_HPP
 
-class PhoneBook
+class Contact
 {
 private:
 
@@ -11,10 +11,10 @@ public:
 
 	int	publicVar;
 
-	PhoneBook(void);							// Constructeur
-	PhoneBook(const PhoneBook& other);			// Constructeur de copie (1)
-	~PhoneBook(void);							// Destructeur
-	PhoneBook& operator=(const PhoneBook& rhs);	// Opérateur d'affectation (2)
+	Contact(void);							// Constructeur
+	Contact(const Contact& other);			// Constructeur de copie (1)
+	~Contact(void);							// Destructeur
+	Contact& operator=(const Contact& rhs);	// Opérateur d'affectation (2)
 
 };
 

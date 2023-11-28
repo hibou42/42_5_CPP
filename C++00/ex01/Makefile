@@ -4,8 +4,12 @@ NAME			= phonebook
 
 #***** Sources / Objs *****#
 
-SRC				=	src/phonebook.cpp \
-					lib/PhoneBook.class.cpp
+SRC				=	src/main.cpp \
+					src/input.cpp \
+					src/add.cpp \
+					src/search.cpp \
+					lib/PhoneBook.class.cpp \
+					lib/Contact.class.cpp
 
 OBJ_DIR			=	obj
 OBJS			=	$(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
@@ -67,7 +71,7 @@ $(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
 		@$(CXX) $(CXXFLAGS) -c $< -o $@
 		$(eval COMPILED_FILES=$(shell echo $$(($(COMPILED_FILES)+1))))
 		@printf "$(GREEN)%s$(ENDCOLOR)" $(MESSAGE)
-		@sleep 0.01
+		@sleep 0.0001
 		@printf "\r"
 
 $(NAME) :	${OBJS}

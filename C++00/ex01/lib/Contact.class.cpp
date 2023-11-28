@@ -1,27 +1,27 @@
 #include "../src/main_lib.hpp"
 
 // Constructeur
-PhoneBook::PhoneBook(void) 
+Contact::Contact(void) 
 {
 	this->_privateVar = 0;
 	std::cout << "Constructor called" << std::endl;
 }
 
 // Constructeur de copie
-PhoneBook::PhoneBook(const PhoneBook& other) 
+Contact::Contact(const Contact& other) 
 {
 	*this = other;
 	std::cout << "Copy constructor called" << std::endl;
 }
 
 // Destructeur
-PhoneBook::~PhoneBook(void) 
+Contact::~Contact(void) 
 {
 	std::cout << "Destructor called" << std::endl;
 }
 
 // Opérateur d'affectation
-PhoneBook& PhoneBook::operator=(const PhoneBook& rhs) 
+Contact& Contact::operator=(const Contact& rhs) 
 {
 	if (this != &rhs) {
 		this->_privateVar = rhs._privateVar;
