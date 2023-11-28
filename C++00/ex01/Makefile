@@ -71,7 +71,6 @@ $(OBJ_DIR)/%.o: %.cpp | $(OBJ_DIR)
 		@$(CXX) $(CXXFLAGS) -c $< -o $@
 		$(eval COMPILED_FILES=$(shell echo $$(($(COMPILED_FILES)+1))))
 		@printf "$(GREEN)%s$(ENDCOLOR)" $(MESSAGE)
-		@sleep 0.0001
 		@printf "\r"
 
 $(NAME) :	${OBJS}

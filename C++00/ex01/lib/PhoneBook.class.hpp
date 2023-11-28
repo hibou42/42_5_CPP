@@ -1,11 +1,14 @@
 #ifndef PHONEBOOK_CLASS_HPP
 # define PHONEBOOK_CLASS_HPP
 
+# include "../src/main_lib.hpp"
+# include "Contact.class.hpp"
+
 class PhoneBook
 {
 private:
 
-	int	_privateVar;
+	Contact	contact[8];
 
 public:
 
