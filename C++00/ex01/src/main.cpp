@@ -4,6 +4,6 @@ int main(void)
 {
 	PhoneBook	PB;
 
-	input();
+	input(&PB);
 	return (0);
 }

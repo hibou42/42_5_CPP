@@ -1,8 +1,8 @@
 # include "main_lib.hpp"
 
-int		hardwork(std::string input);
+int		hardwork(PhoneBook	*PB, std::string input);
 
-void	input()
+void	input(PhoneBook	*PB)
 {
 	std::string	input;
 
@@ -11,27 +11,25 @@ void	input()
 	{
 		std::cout << "Make a choice 'ADD', 'SEARCH', 'EXIT' :" << std::endl;
 		std::cin >> input;
-		if (hardwork(input) != 0)
+		if (hardwork(PB, input) != 0)
 			break;
 	}
-
 }
 
-int		hardwork(std::string input)
+int		hardwork(PhoneBook	*PB, std::string input)
 {
 	if (input.length() == 3 && (input == "ADD" || input == "add"))
 	{
-		add();
+		PB->AddContact();
 		return 0;
 	}
 	else if (input.length() == 6 && (input == "SEARCH" || input == "search"))
 	{
-		search();
+		PB->Search();
 		return 0;
 	}
 	else if (input.length() == 4 && (input == "EXIT" || input == "exit"))
 	{
-		std::cout << "Thanks for using the Amazing Phonebook !!!" << std::endl;
 		return 1;
 	}
 	else

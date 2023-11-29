@@ -6,8 +6,6 @@ NAME			= phonebook
 
 SRC				=	src/main.cpp \
 					src/input.cpp \
-					src/add.cpp \
-					src/search.cpp \
 					lib/PhoneBook.class.cpp \
 					lib/Contact.class.cpp
 
@@ -94,4 +92,4 @@ fclean:		clean
 
 re:		fclean all
 
-.PHONY:	all clean fclean 
+.PHONY:	all clean fclean

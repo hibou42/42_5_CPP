@@ -8,8 +8,6 @@
 # include <cstdlib>
 # include <string>
 
-void	input();
-void	add();
-void	search();
+void	input(PhoneBook	*PB);
 
 #endif
