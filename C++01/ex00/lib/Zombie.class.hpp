@@ -1,7 +1,7 @@
-#ifndef SAMPLE_CLASS_HPP
-# define SAMPLE_CLASS_HPP
+#ifndef ZOMBIE_CLASS_HPP
+# define ZOMBIE_CLASS_HPP
 
-class Sample
+class Zombie
 {
 private:
 
@@ -11,10 +11,10 @@ public:
 
 	int	publicVar;
 
-	Sample(void);							// Constructeur
-	Sample(const Sample& other);			// Constructeur de copie (1)
-	Sample& operator=(const Sample& rhs);	// Opérateur d'affectation (2)
-	~Sample(void);							// Destructeur
+	Zombie(void);							// Constructeur
+	Zombie(const Zombie& other);			// Constructeur de copie (1)
+	Zombie& operator=(const Zombie& rhs);	// Opérateur d'affectation (2)
+	~Zombie(void);							// Destructeur
 
 };
 

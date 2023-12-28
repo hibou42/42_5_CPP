@@ -5,7 +5,7 @@ NAME			= BraiiiiiiinnnzzzZ
 #***** Sources / Objs *****#
 
 SRC				=	src/main.cpp \
-					lib/Sample.class.cpp
+					lib/Zombie.class.cpp
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))

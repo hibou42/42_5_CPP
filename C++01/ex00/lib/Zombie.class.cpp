@@ -1,21 +1,30 @@
 #include "../src/main_lib.hpp"
 
+void	Zombie::announce(void)
+{
+	std::string str;
+
+	str = 
+	std::cout << name << " : BraiiiiiiinnnzzzZ..." << std::endl;
+
+}
+
 // Constructeur
-Sample::Sample(void)
+Zombie::Zombie(void)
 {
 	this->_privateVar = 0;
 	std::cout << "Constructor called" << std::endl;
 }
 
 // Constructeur de copie
-Sample::Sample(const Sample& other)
+Zombie::Zombie(const Zombie& other)
 {
 	*this = other;
 	std::cout << "Copy constructor called" << std::endl;
 }
 
 // Opérateur d'affectation
-Sample& Sample::operator=(const Sample& rhs)
+Zombie& Zombie::operator=(const Zombie& rhs)
 {
 	if (this != &rhs)
 		this->_privateVar = rhs._privateVar;
@@ -24,7 +33,7 @@ Sample& Sample::operator=(const Sample& rhs)
 }
 
 // Destructeur
-Sample::~Sample(void)
+Zombie::~Zombie(void)
 {
 	std::cout << "Destructor called" << std::endl;
 }
