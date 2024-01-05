@@ -1,13 +1,12 @@
 #***** Name *****#
 
-NAME			= BraiiiiiiinnnzzzZ
+NAME			= Moar_brainz
 
 #***** Sources / Objs *****#
 
 SRC				=	main.cpp \
 					Zombie.cpp \
-					newZombie.cpp \
-					randomChump.cpp
+					ZombieHorde.cpp
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
