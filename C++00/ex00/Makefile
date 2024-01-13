@@ -54,7 +54,7 @@ logo :
 		@$(BS_N_TXT)
 
 start:
-		@tput setaf 2; cat ascii_art/megaphone; tput setaf default
+		@tput setaf 2; cat ascii_art/logo; tput setaf default
 		@$(BS_N_TXT)
 		@$(START_TXT)
 

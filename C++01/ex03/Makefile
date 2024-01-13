@@ -1,16 +1,13 @@
 #***** Name *****#
 
-NAME			= phonebook
+NAME			= Unnecessary_violence
 
 #***** Sources / Objs *****#
 
-SRC				=	src/main.cpp \
-					src/input.cpp \
-					lib/PhoneBook.class.cpp \
-					lib/Contact.class.cpp
+SRC				=	main.cpp
 
-OBJ_DIR			=	obj
-OBJS			=	$(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
+OBJ_DIR			= obj
+OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
 #***** Couleurs *****#
 
@@ -92,4 +89,4 @@ fclean:		clean
 
 re:		fclean all
 
-.PHONY:	all clean fclean
+.PHONY:	all clean fclean 
