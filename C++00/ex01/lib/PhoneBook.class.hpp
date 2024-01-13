@@ -19,8 +19,6 @@ public:
 	int		GetNbOfContact() const;
 
 	PhoneBook(void);
-	PhoneBook(const PhoneBook& other);			// Constructeur de copie (1)
-	PhoneBook& operator=(const PhoneBook& rhs);	// Opérateur d'affectation (2)
 	~PhoneBook(void);
 
 };

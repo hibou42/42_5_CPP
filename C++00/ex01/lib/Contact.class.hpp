@@ -30,8 +30,6 @@ public:
 	std::string	GetDarkestSecret() const;
 
 	Contact(void);
-	Contact(const Contact& other);			// Constructeur de copie (1)
-	Contact& operator=(const Contact& rhs);	// Opérateur d'affectation (2)
 	~Contact(void);
 
 };

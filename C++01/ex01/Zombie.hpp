@@ -13,8 +13,6 @@ private:
 public:
 
 	Zombie(void);							// Constructeur
-	Zombie(const Zombie& other);			// Constructeur de copie
-	Zombie& operator=(const Zombie& rhs);	// Opérateur d'affectation
 	void announce(int i);
 	void SetName(std::string name);
 	~Zombie(void);							// Destructeur
