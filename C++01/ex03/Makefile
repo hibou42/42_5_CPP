@@ -4,7 +4,10 @@ NAME			= Unnecessary_violence
 
 #***** Sources / Objs *****#
 
-SRC				=	main.cpp
+SRC				=	main.cpp \
+					Weapon.cpp \
+					HumanA.cpp \
+					HumanB.cpp
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
