@@ -2,13 +2,14 @@
 # define HUMAN_B_HPP
 
 #include <string>
+#include <iostream>
 #include "Weapon.hpp"
 
 class HumanB
 {
 private:
 
-	Weapon		*_type;
+	Weapon		*_stuff;
 	std::string	_name;
 
 public:

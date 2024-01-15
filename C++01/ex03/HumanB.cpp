@@ -1,5 +1,4 @@
 #include "HumanB.hpp"
-#include <iostream>
 
 std::string	HumanB::getName() const 
 {
@@ -8,12 +7,12 @@ std::string	HumanB::getName() const
 
 std::string	HumanB::getWeapon() const
 {
-	return (this->_type->getType());
+	return (this->_stuff->getType());
 }
 
 void	HumanB::attack() const
 {
-	if (this->_type == NULL)
+	if (this->_stuff == NULL)
 		std::cout << this->getName() << " attacks without weapon" << std::endl;
 	else
 		std::cout << this->getName() << " attacks with their " << this->getWeapon() << std::endl;
@@ -21,7 +20,7 @@ void	HumanB::attack() const
 
 void		HumanB::setWeapon(Weapon &weapon)
 {
-	this->_type = &weapon;
+	this->_stuff = &weapon;
 }
 
 // Constructeur
