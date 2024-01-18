@@ -14,7 +14,6 @@ private:
 	void	error(void);
 
 public:
-
 	Harl();								// Constructeur
 	~Harl();							// Destructeur
 
