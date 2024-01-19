@@ -6,11 +6,9 @@
 class Weapon
 {
 private:
-
 	std::string	_type;
 
 public:
-
 	Weapon(std::string str);							// Constructeur
 	~Weapon(void);							// Destructeur
 	void		setType(std::string str);

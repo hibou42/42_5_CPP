@@ -7,12 +7,10 @@
 class PhoneBook
 {
 private:
-
 	Contact	_contact[8];
 	int		_nbOfContact;
 
 public:
-
 	void	AddContact();
 	void	Search();
 	void	SetNbOfContact(int i);

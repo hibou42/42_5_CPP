@@ -8,12 +8,10 @@
 class HumanA
 {
 private:
-
 	Weapon		&_stuff;
 	std::string	_name;
 
 public:
-
 	HumanA(std::string str, Weapon &weapon);// Constructeur
 	~HumanA(void);							// Destructeur
 

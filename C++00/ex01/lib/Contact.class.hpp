@@ -7,7 +7,6 @@
 class Contact
 {
 private:
-
 	std::string _lastName;
 	std::string _firstName;
 	std::string _nickname;
@@ -15,7 +14,6 @@ private:
 	std::string _darkestSecret;
 
 public:
-
 	int		index;
 
 	void	SetLastName(std::string str);
