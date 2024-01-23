@@ -71,7 +71,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		else if (this->_Life == 1)
 			std::cout << "ClapTrap " << this->_Name << " has only one life point left ! ACHTUNG !!!" << std::endl;
 		else
-			std::cout << "ClapTrap " << this->_Name << " have " << this->_life << " life points left !" << std::endl;
+			std::cout << "ClapTrap " << this->_Name << " have " << this->_Life << " life points left !" << std::endl;
 	}
 }
 
