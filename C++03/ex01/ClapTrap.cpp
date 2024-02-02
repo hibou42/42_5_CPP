@@ -42,6 +42,22 @@ ClapTrap::~ClapTrap()
 	std::cout << "Destructor ClapTrap called" << std::endl;
 }
 
+unsigned int ClapTrap::getEnergyPoint() const
+{
+	std::cout << "Energy point of " << _Name << " = " << _Energy << std::endl;
+	return _Energy;
+}
+unsigned int ClapTrap::getHitPoint() const
+{
+	std::cout << "Life point of " << _Name << " = " << _Life << std::endl;
+	return _Life;
+}
+unsigned int ClapTrap::getAttackDamage() const
+{
+	std::cout << "Attack point of " << _Name << " = " << _Attack_Damage << std::endl;
+	return _Attack_Damage;
+}
+
 void	ClapTrap::attack(const std::string& target)
 {
 	if (this->_Life <= 0)

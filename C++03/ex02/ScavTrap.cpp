@@ -42,5 +42,5 @@ ScavTrap::~ScavTrap()
 
 void	ScavTrap::guardGate()
 {
-	std::cout << "Enter in gate keeper mode" << std::endl;
+	std::cout << this->_Name << " enter in gate keeper mode" << std::endl;
 }

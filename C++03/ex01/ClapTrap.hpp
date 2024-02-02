@@ -20,6 +20,10 @@ public:
 	ClapTrap &operator=(ClapTrap const &rhs);	// Opérateur d'affectation
 	~ClapTrap();								// Destructeur
 
+	unsigned int getEnergyPoint() const;
+	unsigned int getHitPoint() const;
+	unsigned int getAttackDamage() const;
+
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
