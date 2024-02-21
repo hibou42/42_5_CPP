@@ -1,4 +1,4 @@
-#include "lib/Animal.hpp"
+#include "lib/AAnimal.hpp"
 #include "lib/Cat.hpp"
 #include "lib/Dog.hpp"
 #include "lib/WrongAnimal.hpp"
@@ -6,14 +6,10 @@
 
 int main (void)
 {
-	const Animal *animal = new Animal();
-	const Animal *dog = new Dog();
-	const Animal *cat = new Cat();
+	//const AAnimal *aanimal = new AAnimal();
+	const AAnimal *dog = new Dog();
+	const AAnimal *cat = new Cat();
 
-	std::cout << "Test default sound Animal" << std::endl;
-	animal->makeSound();
-
-	std::cout << animal->getType() << std::endl;
 	std::cout << dog->getType() << std::endl;
 	std::cout << cat->getType() << std::endl;
 	dog->makeSound();
@@ -29,7 +25,6 @@ int main (void)
 	delete dog;
 	delete cat;
 	delete wrongcat;
-	delete animal;
 
 	return (0);
 }
