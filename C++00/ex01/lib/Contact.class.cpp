@@ -1,5 +1,4 @@
-#include "../src/main_lib.hpp"
-#include <string>
+# include "Contact.class.hpp"
 
 void	Contact::SetLastName(std::string str)
 {

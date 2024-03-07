@@ -1,15 +1,15 @@
-#include "../src/main_lib.hpp"
+# include "PhoneBook.class.hpp"
 
 int		check(std::string str)
 {
 	if (str.length() == 0)
 		return (1);
-	int stop = 1;
+	int stop = 0;
 	int i = 0;
 	while (str[i])
 	{
-		if (std::isdigit(str[i]) || std::isalpha(str[i]))
-			stop = 0;
+		if (!std::isdigit(str[i]) && !std::isalpha(str[i]))
+			stop++;
 		i++;
 	}
 	return (stop);

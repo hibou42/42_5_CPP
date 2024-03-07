@@ -1,4 +1,5 @@
-# include "main_lib.hpp"
+# include "../lib/PhoneBook.class.hpp"
+# include "../lib/Contact.class.hpp"
 
 int		hardwork(PhoneBook	*PB, std::string input);
 

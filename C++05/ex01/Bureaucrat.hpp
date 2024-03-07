@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
-class Bureaucrat;  // Forward declaration
+class Form;
 #include "Form.hpp"
 
 class Bureaucrat
