@@ -12,14 +12,14 @@ private:
 	std::string	_name;
 
 public:
-	HumanB(std::string str);				// Constructeur
-	~HumanB(void);							// Destructeur
+	HumanB(std::string str);					// Constructeur
+	~HumanB(void);								// Destructeur
 
 	std::string	getName() const;
-	void		setWeapon(Weapon &weapon);
 	std::string	getWeapon() const;
-	void		attack() const;
+	void		setWeapon(Weapon &weapon);
 
+	void		attack() const;
 };
 
 #endif

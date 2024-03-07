@@ -1,7 +1,6 @@
 #include "Harl.hpp"
 #include <iostream>
 
-
 int	checkArg(int argc, char **argv);
 
 int	main(int argc, char **argv)

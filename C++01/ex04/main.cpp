@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 	return (0);
 }
 
-int			checkArg(int argc, char **argv)
+int	checkArg(int argc, char **argv)
 {
 	(void)argv;
 	if (argc != 4)
