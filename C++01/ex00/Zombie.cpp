@@ -1,14 +1,15 @@
 #include "Zombie.hpp"
 
+void	Zombie::announce(void)
+{
+	std::cout << _name << " : BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
 // Constructeur
 Zombie::Zombie(std::string name)
 {
 	this->_name = name;
-}
-
-void	Zombie::announce(void)
-{
-	std::cout << _name << " : BraiiiiiiinnnzzzZ !!!" << std::endl;
+	std::cout << _name << " : Constructor called" << std::endl;
 }
 
 // Destructeur

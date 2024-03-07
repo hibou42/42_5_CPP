@@ -11,14 +11,3 @@ Zombie	*ZombieHorde(int N, std::string name)
 	}
 	return (zombie);
 }
-
-void Zombie::SetName(std::string name)
-{
-	this->_name = name;
-}
-
-void	Zombie::announce(int i)
-{
-
-	std::cout << _name << " " << i << " : BraiiiiiiinnnzzzZ !!!" << std::endl;
-}

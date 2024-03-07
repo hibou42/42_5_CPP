@@ -10,11 +10,12 @@ private:
 	std::string	_name;
 
 public:
-	Zombie(void);							// Constructeur
-	void announce(int i);
-	void SetName(std::string name);
-	~Zombie(void);							// Destructeur
+	Zombie(void);						// Constructeur
+	~Zombie(void);						// Destructeur
 
+	void announce(int i);
+
+	void SetName(std::string name);
 };
 
 Zombie	*ZombieHorde(int N, std::string name);
