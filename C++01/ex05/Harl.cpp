@@ -6,7 +6,7 @@ void	Harl::complain(std::string str)
 
 	std::string	lvl[4] = { "debug", "info", "warning", "error" };
 	std::string	LVL[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
-	
+
 	int	check = 0;
 	for (int i = 0; i < 4; i++)
 	{
