@@ -16,12 +16,12 @@ int main(void)
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
 	// return 0;
+	std::cout << "\033[31mEnd of PDF test code :\033[0m" << std::endl;
 	}
 	{
 	std::cout << "\033[31mMy test code :\033[0m" << std::endl;
 	Fixed 		a;
 	Fixed const b(Fixed( 5.05f ) * Fixed( 2 ));
-
 	Fixed	c(5);
 	std::cout << "c = 5" << std::endl;
 	Fixed	d(10);
@@ -37,7 +37,6 @@ int main(void)
 	else
 		std::cout << "d < c\t" << d << " > " << c << std::endl;
 
-	std::cout << "d <= e :" << std::endl;
 	if (d <= e)
 		std::cout << "d <= e\t" << d << " <= " << e << std::cout;
 	std::cout << "c == f\t" <<std::endl;

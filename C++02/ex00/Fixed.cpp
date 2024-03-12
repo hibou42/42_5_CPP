@@ -1,5 +1,16 @@
 #include "Fixed.hpp"
 
+int Fixed::getRawBits() const
+{
+	std::cout << "getRawBits member function called" << std::endl;
+	return _fixedPointValue;
+}
+
+void Fixed::setRawBits(int const raw)
+{
+	_fixedPointValue = raw;
+}
+
 Fixed::Fixed() : _fixedPointValue(0)
 {
 	std::cout << "Default constructor called" << std::endl;
@@ -22,17 +33,6 @@ Fixed &Fixed::operator=(const Fixed &other)
 Fixed::~Fixed()
 {
 	std::cout << "Destructor called" << std::endl;
-}
-
-int Fixed::getRawBits() const
-{
-	std::cout << "getRawBits member function called" << std::endl;
-	return _fixedPointValue;
-}
-
-void Fixed::setRawBits(int const raw)
-{
-	_fixedPointValue = raw;
 }
 
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
