@@ -1,32 +1,43 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
-{
+// ============================================================================|
+//
+// Fonctions d'interaction
+//
+// ============================================================================|
+
+void	ScavTrap::guardGate() {
+	std::cout << this->_Name << " enter in gate keeper mode" << std::endl;
+}
+
+// ============================================================================|
+//
+// Construction, destruction et overload
+//
+// ============================================================================|
+
+ScavTrap::ScavTrap() : ClapTrap() {
 	std::cout << "Default constructor ScavTrap called" << std::endl;
 	this->_Life = 100;
 	this->_Energy = 50;
 	this->_Attack_Damage = 20;
 }
 
-ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name)
-{
+ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name) {
 	std::cout << "Name constructor ScavTrap called" << std::endl;
 	this->_Life = 100;
 	this->_Energy = 50;
 	this->_Attack_Damage = 20;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &cpy) : ClapTrap()
-{
+ScavTrap::ScavTrap(ScavTrap const &cpy) : ClapTrap() {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = cpy;
 }
 
-ScavTrap &ScavTrap::operator=(ScavTrap const &rhs)
-{
+ScavTrap &ScavTrap::operator=(ScavTrap const &rhs) {
 	std::cout << "Assignment operator called" << std::endl;
-	if (this != &rhs)
-	{
+	if (this != &rhs) {
 		this->_Name = rhs._Name;
 		this->_Life = rhs._Life;
 		this->_Energy = rhs._Energy;
@@ -35,12 +46,6 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &rhs)
 	return (*this);
 }
 
-ScavTrap::~ScavTrap()
-{
+ScavTrap::~ScavTrap() {
 	std::cout << "Destructor ScavTrap called" << std::endl;
-}
-
-void	ScavTrap::guardGate()
-{
-	std::cout << this->_Name << " enter in gate keeper mode" << std::endl;
 }

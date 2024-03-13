@@ -1,11 +1,10 @@
 #include "ClapTrap.hpp"
 
-// Jo code
 int main (void)
 {
-	ClapTrap Clap;
 	ClapTrap Barramin("Barramin");
 	ClapTrap Gravlin("Gravlin");
+	ClapTrap Clap;
 
 	std::cout << "##################################" << std::endl;
 	Barramin.getHitPoint();
