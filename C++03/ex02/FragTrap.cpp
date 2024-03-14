@@ -29,12 +29,12 @@ FragTrap::FragTrap(std::string Name) : ClapTrap(Name) {
 }
 
 FragTrap::FragTrap(FragTrap const &cpy) : ClapTrap() {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor FragTrap called" << std::endl;
 	*this = cpy;
 }
 
 FragTrap &FragTrap::operator=(FragTrap const &rhs) {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Assignment operator FragTrap called" << std::endl;
 	if (this != &rhs) {
 		this->_Name = rhs._Name;
 		this->_Life = rhs._Life;
@@ -45,5 +45,5 @@ FragTrap &FragTrap::operator=(FragTrap const &rhs) {
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "Destructor FragTrap called" << std::endl;
+	std::cout << "Destructor : "<< this->_Name<< " FragTrap called" << std::endl;
 }

@@ -8,7 +8,6 @@
 
 void	ScavTrap::guardGate() {
 	std::cout << this->_Name << " enter in gate keeper mode" << std::endl;
-	std::cout << this->_Life << " enter in gate keeper mode" << std::endl;
 }
 
 // ============================================================================|
@@ -32,12 +31,12 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap(Name) {
 }
 
 ScavTrap::ScavTrap(ScavTrap const &cpy) : ClapTrap() {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor ScavTrap called" << std::endl;
 	*this = cpy;
 }
 
 ScavTrap &ScavTrap::operator=(ScavTrap const &rhs) {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Assignment operator ScavTrap called" << std::endl;
 	if (this != &rhs) {
 		this->_Name = rhs._Name;
 		this->_Life = rhs._Life;
@@ -48,5 +47,5 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &rhs) {
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "Destructor ScavTrap called" << std::endl;
+	std::cout << "Destructor : "<< this->_Name<< " ScavTrap called" << std::endl;
 }

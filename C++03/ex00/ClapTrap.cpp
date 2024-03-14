@@ -96,12 +96,12 @@ ClapTrap::ClapTrap(std::string Name) {
 }
 
 ClapTrap::ClapTrap(ClapTrap const &cpy) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor ClapTrap called" << std::endl;
 	*this = cpy;
 }
 
 ClapTrap &ClapTrap::operator=(ClapTrap const &rhs) {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Assignment operator ClapTrap called" << std::endl;
 	if (this != &rhs) {
 		this->_Name = rhs._Name;
 		this->_Life = rhs._Life;
@@ -112,5 +112,5 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &rhs) {
 }
 
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor ClapTrap " << this->_Name <<" called" << std::endl;
+	std::cout << "Destructor : "<< this->_Name<< " ClapTrap called" << std::endl;
 }
