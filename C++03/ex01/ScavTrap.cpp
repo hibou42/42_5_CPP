@@ -10,6 +10,19 @@ void	ScavTrap::guardGate() {
 	std::cout << this->_Name << " enter in gate keeper mode" << std::endl;
 }
 
+void	ScavTrap::attack(const std::string& target) {
+	if (this->_Life <= 0) {
+		std::cout << "ScavTrap " << this->_Name << " is already dead and can't attack!" << std::endl;
+	} else {
+		if (this->_Energy > 0) {
+			std::cout << "ScavTrap " << this->_Name << " attacks " << target << ", causing " << this->_Attack_Damage << " points of damage !" << std::endl;
+			this->_Energy--;
+		} else {
+			std::cout << "ScavTrap no more energy, " << this->_Name << " can't attack ! " << std::endl;
+		}
+	}
+}
+
 // ============================================================================|
 //
 // Construction, destruction et overload
