@@ -1,12 +1,10 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat()
-{
+Bureaucrat::Bureaucrat() {
 	std::cout << "Default constructor Bureaucrat called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string const &name, int grade) : _name(name), _grade(grade)
-{
+Bureaucrat::Bureaucrat(std::string const &name, int grade) : _name(name), _grade(grade) {
 	std::cout << "Name constructor Bureaucrat called : " << _name << std::endl;
 	if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();

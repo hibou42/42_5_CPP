@@ -1,30 +1,38 @@
 #include "../lib/AAnimal.hpp"
 
-AAnimal::AAnimal()
-{
+// ============================================================================|
+//
+// Accesseurs (getters) et mutateurs (setters)
+//
+// ============================================================================|
+
+std::string	AAnimal::getType() const {
+	return (this->_type);
+}
+
+// ============================================================================|
+//
+// Construction, destruction et overload
+//
+// ============================================================================|
+
+AAnimal::AAnimal() {
 	std::cout << "Default constructor AAnimal called" << std::endl;
 }
 
-AAnimal::AAnimal(AAnimal const  &cpy)
-{
+AAnimal::AAnimal(AAnimal const  &cpy) {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = cpy;
 }
 
-AAnimal &AAnimal::operator=(AAnimal const &rhs)
-{
+AAnimal &AAnimal::operator=(AAnimal const &rhs) {
 	std::cout << "Assignment operator called" << std::endl;
-	if (this != &rhs)
+	if (this != &rhs) {
 		this->_type = rhs._type;
+	}
 	return (*this);
 }
 
-AAnimal::~AAnimal()
-{
+AAnimal::~AAnimal() {
 	std::cout << "Destructor AAnimal called" << std::endl;
-}
-
-std::string	AAnimal::getType() const
-{
-	return (this->_type);
 }
