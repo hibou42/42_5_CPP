@@ -2,6 +2,16 @@
 
 // ============================================================================|
 //
+// Accesseurs (getters) et mutateurs (setters)
+//
+// ============================================================================|
+
+Brain*	Dog::getBrain() const {
+	return (this->_brain);
+}
+
+// ============================================================================|
+//
 // Fonctions d'interaction
 //
 // ============================================================================|
@@ -22,13 +32,12 @@ Dog::Dog() : AAnimal(), _brain(new Brain()) {
 }
 
 Dog::Dog(Dog const &cpy) : AAnimal(cpy), _brain(new Brain (*cpy._brain)) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor Dog called" << std::endl;
 }
 
 Dog &Dog::operator=(Dog const &rhs) {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Assignment operator Dog called" << std::endl;
 	if (this != &rhs) {
-		AAnimal::operator=(rhs);
 		*_brain = *rhs._brain;
 	}
 	return (*this);

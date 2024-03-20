@@ -15,7 +15,8 @@ public:
 	Cat &operator=(Cat const &rhs);	// Opérateur d'affectation
 	~Cat();							// Destructeur
 
-	virtual void	makeSound() const;
+	Brain	*getBrain() const;
+	void	makeSound() const;
 };
 
 #endif

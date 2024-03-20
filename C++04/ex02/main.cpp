@@ -6,25 +6,39 @@
 
 int main (void)
 {
-	//const AAnimal *aanimal = new AAnimal();
-	const AAnimal *dog = new Dog();
-	const AAnimal *cat = new Cat();
+	//uncomment to error -> allocating an object of abstract class type 'AAnimal'
+	//AAnimal *aanimal = new AAnimal();
 
-	std::cout << dog->getType() << std::endl;
-	std::cout << cat->getType() << std::endl;
-	dog->makeSound();
-	cat->makeSound();
+	AAnimal* animals[4];
 
-	std::cout << "Test default WrongAnimal sound :" << std::endl;
-	const WrongAnimal *wronganimal = new WrongAnimal();
-	const WrongAnimal *wrongcat = new WrongCat();
-	wronganimal->makeSound();
-	std::cout << wrongcat->getType() << std::endl;
-	wrongcat->makeSound();
+	std::cout << "--- Tab creation ---" << std::endl;
+	for(int i = 0; i < 2; ++i) {
+		animals[i] = new Dog();
+	}
+	for(int i = 2; i < 4; ++i) {
+		animals[i] = new Cat();
+	}
 
-	delete dog;
+	std::cout << "--- Tab delete ---" << std::endl;
+	for(int i = 0; i < 4; ++i) {
+	delete animals[i];
+	}
+
+	std::cout << "--- Brain test deep copy ---" << std::endl;
+	Cat *cat = new Cat();
+	std::cout << "--> "<<  cat->getBrain()->getIdeas(0) << std::endl;
+
+	Cat *cat2 = new Cat(*cat);
+	cat->getBrain()->setIdeas("New idea", 0);
+	std::cout << "--> "<< cat->getBrain()->getIdeas(0) << std::endl;
+	std::cout << "--> "<< cat2->getBrain()->getIdeas(0) << std::endl;
+
+	*cat2 = *cat;
+	cat->getBrain()->setIdeas("AMAZING", 0);
+	std::cout << "--> "<< cat->getBrain()->getIdeas(0) << std::endl;
+	std::cout << "--> "<< cat2->getBrain()->getIdeas(0) << std::endl;
+
 	delete cat;
-	delete wrongcat;
-
-	return (0);
+	delete cat2;
+	return 0;
 }

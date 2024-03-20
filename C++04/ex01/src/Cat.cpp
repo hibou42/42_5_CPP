@@ -38,7 +38,6 @@ Cat::Cat(Cat const &cpy) : Animal(cpy), _brain(new Brain (*cpy._brain)) {
 Cat &Cat::operator=(Cat const &rhs) {
 	std::cout << "Assignment operator Cat called" << std::endl;
 	if (this != &rhs) {
-		Animal::operator=(rhs);
 		*_brain = *rhs._brain;
 	}
 	return (*this);

@@ -38,7 +38,6 @@ Dog::Dog(Dog const &cpy) : Animal(cpy), _brain(new Brain (*cpy._brain)) {
 Dog &Dog::operator=(Dog const &rhs) {
 	std::cout << "Assignment operator called" << std::endl;
 	if (this != &rhs) {
-		Animal::operator=(rhs);
 		*_brain = *rhs._brain;
 	}
 	return (*this);

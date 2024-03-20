@@ -21,12 +21,12 @@ AAnimal::AAnimal() {
 }
 
 AAnimal::AAnimal(AAnimal const  &cpy) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor AAnimal called" << std::endl;
 	*this = cpy;
 }
 
 AAnimal &AAnimal::operator=(AAnimal const &rhs) {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Assignment operator AAnimal called" << std::endl;
 	if (this != &rhs) {
 		this->_type = rhs._type;
 	}

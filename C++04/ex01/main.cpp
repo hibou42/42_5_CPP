@@ -23,21 +23,20 @@ int main (void)
 	}
 
 	std::cout << "--- Brain test deep copy ---" << std::endl;
-	Cat cat;
-	Brain *catBrain = cat.getBrain();
-	std::cout << "--> "<<  catBrain->getIdeas(0) << std::endl;
+	Cat *cat = new Cat();
+	std::cout << "--> "<<  cat->getBrain()->getIdeas(0) << std::endl;
 
-	Cat cat2(cat);
-	Brain *cat2Brain = cat2.getBrain();
-	catBrain->setIdeas("New idea", 0);
-	std::cout << "--> "<< catBrain->getIdeas(0) << std::endl;
-	std::cout << "--> "<< cat2Brain->getIdeas(0) << std::endl;
+	Cat *cat2 = new Cat(*cat);
+	cat->getBrain()->setIdeas("New idea", 0);
+	std::cout << "--> "<< cat->getBrain()->getIdeas(0) << std::endl;
+	std::cout << "--> "<< cat2->getBrain()->getIdeas(0) << std::endl;
 
-	cat2 = cat;
-	catBrain->setIdeas("Bad idea", 0);
-	std::cout << "--> "<< catBrain->getIdeas(0) << std::endl;
-	std::cout << "--> "<< cat2Brain->getIdeas(0) << std::endl;
-	// catBrain->setIdeas("nouvelle idée", 0);
+	*cat2 = *cat;
+	cat->getBrain()->setIdeas("AMAZING", 0);
+	std::cout << "--> "<< cat->getBrain()->getIdeas(0) << std::endl;
+	std::cout << "--> "<< cat2->getBrain()->getIdeas(0) << std::endl;
 
+	delete cat;
+	delete cat2;
 	return 0;
 }
