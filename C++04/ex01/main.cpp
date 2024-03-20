@@ -27,11 +27,13 @@ int main (void)
 	std::cout << "--> "<<  cat->getBrain()->getIdeas(0) << std::endl;
 
 	Cat *cat2 = new Cat(*cat);
+	std::cout << "ici "<< cat2->getType() << std::endl;
 	cat->getBrain()->setIdeas("New idea", 0);
 	std::cout << "--> "<< cat->getBrain()->getIdeas(0) << std::endl;
 	std::cout << "--> "<< cat2->getBrain()->getIdeas(0) << std::endl;
 
 	*cat2 = *cat;
+	std::cout << cat2->getType() << std::endl;
 	cat->getBrain()->setIdeas("AMAZING", 0);
 	std::cout << "--> "<< cat->getBrain()->getIdeas(0) << std::endl;
 	std::cout << "--> "<< cat2->getBrain()->getIdeas(0) << std::endl;
