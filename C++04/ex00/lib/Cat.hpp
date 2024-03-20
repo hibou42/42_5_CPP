@@ -13,7 +13,7 @@ public:
 	Cat &operator=(Cat const &rhs);	// Opérateur d'affectation
 	~Cat();							// Destructeur
 
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 #endif

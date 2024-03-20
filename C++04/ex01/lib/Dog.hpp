@@ -15,7 +15,7 @@ public:
 	Dog &operator=(Dog const &rhs);	// Opérateur d'affectation
 	~Dog();							// Destructeur
 
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 #endif

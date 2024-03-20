@@ -28,6 +28,7 @@ std::string	Animal::getType() const {
 
 Animal::Animal() {
 	std::cout << "Default constructor Animal called" << std::endl;
+	this->_type = "default";
 }
 
 Animal::Animal(Animal const  &cpy) {

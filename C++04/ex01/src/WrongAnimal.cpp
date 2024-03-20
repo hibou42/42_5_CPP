@@ -28,6 +28,7 @@ std::string	WrongAnimal::getType() const {
 
 WrongAnimal::WrongAnimal() {
 	std::cout << "Default constructor WrongAnimal called" << std::endl;
+	this->_type = "WrongDefault";
 }
 
 WrongAnimal::WrongAnimal(WrongAnimal const &cpy) {

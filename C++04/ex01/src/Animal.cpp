@@ -28,15 +28,16 @@ std::string	Animal::getType() const {
 
 Animal::Animal() {
 	std::cout << "Default constructor Animal called" << std::endl;
+	this->_type = "default";
 }
 
 Animal::Animal(Animal const  &cpy) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor Animal called" << std::endl;
 	*this = cpy;
 }
 
 Animal &Animal::operator=(Animal const &rhs) {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "Assignment operator Animal called" << std::endl;
 	if (this != &rhs) {
 		this->_type = rhs._type;
 	}
