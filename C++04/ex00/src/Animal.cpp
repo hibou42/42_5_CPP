@@ -45,5 +45,5 @@ Animal &Animal::operator=(Animal const &rhs) {
 }
 
 Animal::~Animal() {
-	std::cout << "Destructor Animal called" << std::endl;
+	//std::cout << "Destructor Animal called" << std::endl;
 }

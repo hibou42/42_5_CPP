@@ -4,14 +4,15 @@
 #include <iostream>
 #include <string>
 #include <exception>
-class Bureaucrat;
-#include "Bureaucrat.hpp"
 
-class Form
-{
+#include "Bureaucrat.hpp"
+class Bureaucrat;
+
+class Form {
 private:
 	const std::string	_name;
 	bool				_sign;
+
 	const int 			_requ_sign;
 	const int			_requ_exe;
 
@@ -22,25 +23,24 @@ public:
 	Form &operator=(Form const &rhs);
 	~Form();
 
+	void		beSigned(const Bureaucrat &bureaucrat);
+
 	std::string	getName() const;
+	bool		getSign() const;
 	int			getGradeRequ_sign() const;
 	int			getGradeRequ_exe() const;
 
-	void		beSigned(const Bureaucrat &bureaucrat);
-
-	class 	GradeTooHighException : public std::exception
-	{
+	class 	GradeTooHighException : public std::exception {
 	public :
 		virtual const char* what() const throw();
 	};
 
-	class	GradeTooLowException : public std::exception
-	{
+	class	GradeTooLowException : public std::exception {
 	public :
 		virtual const char *what() const throw();
 	};
 };
 
-	std::ostream &operator<<(std::ostream &o, Form const &rhs);
+std::ostream &operator<<(std::ostream &o, Form const &rhs);
 
 #endif

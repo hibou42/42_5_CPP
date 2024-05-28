@@ -32,4 +32,5 @@ int main (void)
 	delete animal;
 
 	return (0);
+
 }

@@ -1,47 +1,32 @@
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
 
-int main()
-{
-    // Create bureaucrats
-    Bureaucrat chief("Chief", 1); // Highest possible grade
-    Bureaucrat manager("Manager", 75); // Mid-level grade
-    Bureaucrat intern("Intern", 150); // Lowest possible grade
+int main() {
+	// Create bureaucrats
+	Bureaucrat chief("Chief", 1); // Highest possible grade
+	Bureaucrat manager("Manager", 75); // Mid-level grade
+	Bureaucrat intern("Intern", 150); // Lowest possible grade
+	// Create forms
+	Form form50("form50", 50, 1);
+	Form form75("form75", 75, 1);
+	Form form149("form149", 149, 1);
+	std::cout << "----------------------------------------------------------------" << std::endl;
+	// Print the bureaucrats and forms before signing
+	std::cout << chief << manager << intern << form50 << form149;
+	std::cout << "----------------------------------------------------------------" << std::endl;
+	// Attempt to sign forms
+	chief.signForm(form50);
+	manager.signForm(form75);
+	intern.signForm(form149); // This should fail
+	std::cout << "----------------------------------------------------------------" << std::endl;
+	// Print the forms after signing attempts
+	std::cout << form50 << form75 << form149;
+	std::cout << "----------------------------------------------------------------" << std::endl;
+	// Increment and decrement grades of bureaucrats and attempt to sign again
+	intern.incrementation();
+	intern.signForm(form149); // This should not fail anymore
+	std::cout << form149;
+	std::cout << "----------------------------------------------------------------" << std::endl;
 
-    // Create forms
-    Form taxReturn("Tax Return", 50, 25); // Requires high grade to sign
-    Form vacationRequest("Vacation Request", 100, 50); // Requires lower grade to sign
-
-    // Print the bureaucrats and forms before signing
-    std::cout << chief << std::endl;
-    std::cout << manager << std::endl;
-    std::cout << intern << std::endl;
-    std::cout << taxReturn << std::endl;
-    std::cout << vacationRequest << std::endl;
-
-    // Attempt to sign forms
-    chief.signForm(taxReturn);
-    manager.signForm(vacationRequest);
-    intern.signForm(taxReturn); // This should fail
-
-    // Print the forms after signing attempts
-    std::cout << taxReturn << std::endl;
-    std::cout << vacationRequest << std::endl;
-
-
-	std::cout << "ICI 1" << std::endl;
-    // Increment and decrement grades of bureaucrats and attempt to sign again
-    try {
-        intern.decrementation(); // This should throw an exception
-    } catch (const std::exception& e) {
-        std::cout << e.what() << std::endl;
-    }
-	std::cout << "ICI 2" << std::endl;
-    try {
-        chief.incrementation(); // This should also throw an exception
-    } catch (const std::exception& e) {
-        std::cout << e.what() << std::endl;
-    }
-
-    return 0;
+	return 0;
 }

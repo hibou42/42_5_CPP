@@ -9,6 +9,7 @@
 class PhoneBook
 {
 private:
+	std::string paassword;
 	Contact	_contact[8];
 	int		_nbOfContact;
 
