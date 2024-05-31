@@ -12,6 +12,7 @@ int main() {
 		chief.signForm(*form1);
 		chief.executeForm(*form1);
 		std::cout << std::endl;
+		delete form1;
 	}
 	catch (std::exception & e) {
 		std::cout << e.what() << std::endl;
@@ -29,6 +30,7 @@ int main() {
 		manager.executeForm(*form2);
 		std::cout << std::endl;
 	}
+		delete form2;
 	catch (std::exception & e) {
 		std::cout << e.what() << std::endl;
 	}
@@ -43,6 +45,8 @@ int main() {
 		std::cout << std::endl << lowBureau << *form3;;
 		lowBureau.signForm(*form3);
 		lowBureau.executeForm(*form3);
+		delete form3;
+
 	}
 	catch (std::exception & e) {
 		std::cout << e.what() << std::endl;
