@@ -16,9 +16,7 @@ void	Bureaucrat::decrementation() {
 		throw Bureaucrat::GradeTooLowException();
 }
 
-// ============================================================================|
-// Getters
-// ============================================================================|
+
 
 std::string Bureaucrat::getName() const {
 	return (this->_name);

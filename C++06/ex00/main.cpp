@@ -1,19 +1,19 @@
-#include "convert.hpp"
+#include "Converter.hpp"
 
-int main(int argc, char** argv)
-{
-	if (argc < 2){
-		std::cout << "No arguments" << std::endl;
-		exit(EXIT_FAILURE);
+int main(int ac, char **av) {
+	if (ac != 2) {
+		std::cout << "Usage: ./converter number" << std::endl;
+		return 1;
 	}
-	Convert input;
-	std::string	str = static_cast<std::string>(argv[1]);
-	std::cout << "Input = " << str << std::endl;
-	if (str.length() == 1)
-		input.parsing_input_length_1(str);
-	else{
-		input.parsing_input(str);
+
+	Converter c(av[1]);
+	std::cout << c.getStr() << std::endl;
+	try	{
+		c.execution();
+		std::cout << c;
 	}
-	input.convert_to(str);
-	return (0);
+	catch(const std::exception& e) {
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+	return 0;
 }

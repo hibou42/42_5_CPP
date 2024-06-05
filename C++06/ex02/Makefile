@@ -1,12 +1,14 @@
 #***** Name *****#
 
-NAME			= converter
+NAME			= Identify 
 
 #***** Sources / Objs *****#
 
-SRC				=	main.cpp \
-					AScalarConverter.cpp \
-					Converter.cpp
+SRC				=	src/main.cpp \
+					src/Base.cpp \
+					src/A.cpp \
+					src/B.cpp \
+					src/C.cpp
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))

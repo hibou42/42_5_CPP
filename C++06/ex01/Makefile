@@ -1,12 +1,10 @@
 #***** Name *****#
 
-NAME			= converter
+NAME			= serial
 
 #***** Sources / Objs *****#
 
-SRC				=	main.cpp \
-					AScalarConverter.cpp \
-					Converter.cpp
+SRC				=	main.cpp 
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
