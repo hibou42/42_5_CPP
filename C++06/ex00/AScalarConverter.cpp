@@ -130,6 +130,7 @@ void	AScalarConverter::convert() {
 }
 
 bool	AScalarConverter::isImpossible() {
+	std::locale::global(std::locale::classic()); // Set global locale to "C"
 	try {
 		if (_type == INT) {
 			_n = std::stoi(_str);
@@ -143,6 +144,7 @@ bool	AScalarConverter::isImpossible() {
 		_impossible = true;
 		return true;
 	}
+	_impossible = false;
 	return false;
 }
 
@@ -163,7 +165,7 @@ void	AScalarConverter::printChar() const {
 
 void	AScalarConverter::printInt() const {
 	if (this->isLiterals() || (!std::isprint(_n) && (_n >= 127))) {
-		std::cout << "Impossible int";
+		std::cout << "Impossible";
 	} else {
 		std::cout << getI();
 	}
@@ -202,7 +204,7 @@ void	AScalarConverter::printDouble() const {
 		if (_d - static_cast< int > (_d) == 0 ) {
 			std::cout << _d << ".0";
 		} else {
-			std::cout << getD() << "f";
+			std::cout << getD();
 		}
 	}
 	std::cout << std::endl;

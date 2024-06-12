@@ -39,7 +39,7 @@ MESSAGE			=	"Compilation en cours : $(COMPILED_FILES)/$(TOTAL_FILES) ($(shell ex
 #***** Flags *****#
 
 CXX				=	c++
-CXXFLAGS		=	-Wall -Wextra -Werror -std=c++98 -g
+CXXFLAGS		=	-Wall -Wextra -Werror -g
 L				=	$(CXXFLAGS) -g -fsanitize=address -fno-omit-frame-pointer
 RM				=	rm -f
 

@@ -7,7 +7,7 @@ int main(int ac, char **av) {
 	}
 
 	Converter c(av[1]);
-	std::cout << c.getStr() << std::endl;
+
 	try	{
 		c.execution();
 		std::cout << c;

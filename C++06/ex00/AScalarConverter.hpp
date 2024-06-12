@@ -5,6 +5,7 @@
 #include <fstream>
 #include <limits>
 #include <cstdlib>
+#include <locale>
 
 enum e_type {
 	NONE,
