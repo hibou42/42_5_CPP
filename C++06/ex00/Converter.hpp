@@ -1,18 +1,21 @@
 #ifndef CONVERTER_HPP
 # define CONVERTER_HPP
 
-#include "AScalarConverter.hpp"
+#include <iostream>
+#include <string>
+#include <climits>
+#include <cmath>
+#include <sys/types.h>
 
-class Converter : public AScalarConverter
-{
+class Converter {
+	private:
+		Converter() {}
+		Converter(const Converter &cpy) {(void)cpy;}
+		Converter &operator=(const Converter &rhs) {(void)rhs; return (*this);}
+		~Converter() {}
+
 	public:
-		Converter();
-		Converter(std::string str);
-		Converter(const Converter &cpy);
-		Converter &operator=(const Converter &rhs);
-		~Converter();
-
-		void execution();
+		static void convert(const std::string &ref);
 };
 
 #endif

@@ -5,7 +5,6 @@ NAME			= converter
 #***** Sources / Objs *****#
 
 SRC				=	main.cpp \
-					AScalarConverter.cpp \
 					Converter.cpp
 
 OBJ_DIR			= obj

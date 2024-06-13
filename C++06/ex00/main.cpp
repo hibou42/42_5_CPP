@@ -6,11 +6,8 @@ int main(int ac, char **av) {
 		return 1;
 	}
 
-	Converter c(av[1]);
-
 	try	{
-		c.execution();
-		std::cout << c;
+		Converter::convert(av[1]);
 	}
 	catch(const std::exception& e) {
 		std::cerr << "Error: " << e.what() << std::endl;
