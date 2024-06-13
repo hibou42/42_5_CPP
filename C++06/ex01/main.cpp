@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdint.h>
 
 struct Data {
 	std::string	name;
