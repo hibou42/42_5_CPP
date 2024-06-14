@@ -7,9 +7,6 @@ int main(int ac, char **av) {
 	}
 
 	try	{
-		int size = strlen(av[1]);
-		std::cout << std::setprecision(size);
-
 		Converter::convert(av[1]);
 	}
 	catch(const std::exception& e) {

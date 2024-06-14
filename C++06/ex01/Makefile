@@ -4,7 +4,8 @@ NAME			= serial
 
 #***** Sources / Objs *****#
 
-SRC				=	main.cpp 
+SRC				=	main.cpp \
+					Converter.cpp
 
 OBJ_DIR			= obj
 OBJS			= $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))

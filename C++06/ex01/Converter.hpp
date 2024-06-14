@@ -2,12 +2,12 @@
 # define CONVERTER_HPP
 
 #include <iostream>
-#include <iomanip>
-#include <cstring>
-#include <string>
-#include <climits>
-#include <cmath>
-#include <sys/types.h>
+#include <stdint.h>
+
+struct Data {
+	std::string	name;
+	int			age;
+};
 
 class Converter {
 	private:
@@ -17,7 +17,8 @@ class Converter {
 		~Converter();
 
 	public:
-		static void convert(const std::string &ref);
+		static uintptr_t	serialize(Data *data);
+		static Data*		deserialize(uintptr_t data);
 };
 
 #endif
