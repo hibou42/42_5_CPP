@@ -12,7 +12,7 @@ void	Converter::convert(const std::string &ref) {
 	}
 
 	std::cout << "char: ";
-	if (nbr < (INT_MAX / 1000) && nbr > INT_MIN / 1000) {
+	if (nbr >= 0 && nbr < 1000000) {
 		if (isprint(nbr))
 			std::cout << "'" << static_cast<char>(nbr) << "'" << std::endl;
 		else
