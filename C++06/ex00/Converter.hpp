@@ -2,6 +2,8 @@
 # define CONVERTER_HPP
 
 #include <iostream>
+#include <iomanip>
+#include <cstring>
 #include <string>
 #include <climits>
 #include <cmath>
