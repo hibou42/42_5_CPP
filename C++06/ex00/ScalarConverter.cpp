@@ -1,6 +1,6 @@
-#include "Converter.hpp"
+#include "ScalarConverter.hpp"
 
-void	Converter::convert(const std::string &ref) {
+void	ScalarConverter::convert(const std::string &ref) {
 	double	nbr;
 	char	*ptr = NULL;
 
@@ -41,15 +41,15 @@ void	Converter::convert(const std::string &ref) {
 		std::cout << std::endl;
 }
 
-Converter::Converter() {}
+ScalarConverter::ScalarConverter() {}
 
-Converter::Converter(const Converter &cpy) {
+ScalarConverter::ScalarConverter(const ScalarConverter &cpy) {
 	(void)cpy;
 }
 
-Converter &Converter::operator=(const Converter &rhs) {
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &rhs) {
 	(void)rhs; 
 	return (*this);
 }
 
-Converter::~Converter() {}
+ScalarConverter::~ScalarConverter() {}

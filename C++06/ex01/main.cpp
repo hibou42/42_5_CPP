@@ -1,4 +1,4 @@
-#include "Converter.hpp"
+#include "Serializer.hpp"
 
 int main() {
 	Data *data = new Data;
@@ -11,11 +11,11 @@ int main() {
 	std::cout << "age : " << data->age << std::endl;
 
 	std::cout << " --- version serialized ---" << std::endl;
-	std::cout << Converter::serialize(data) << std::endl;
+	std::cout << Serializer::serialize(data) << std::endl;
 
 	std::cout << "--- resultat apres deserialisation --- " << std::endl;
-	std::cout << "Name: " << Converter::deserialize(Converter::serialize(data))->name << std::endl;
-	std::cout << "Age: " << Converter::deserialize(Converter::serialize(data))->age << std::endl;
+	std::cout << "Name: " << Serializer::deserialize(Serializer::serialize(data))->name << std::endl;
+	std::cout << "Age: " << Serializer::deserialize(Serializer::serialize(data))->age << std::endl;
 
 	delete data;
 

@@ -1,13 +1,13 @@
-#include "Converter.hpp"
+#include "ScalarConverter.hpp"
 
 int main(int ac, char **av) {
 	if (ac != 2) {
-		std::cout << "Usage: ./converter number" << std::endl;
+		std::cout << "Usage: ./ScalarConverter number" << std::endl;
 		return 1;
 	}
 
 	try	{
-		Converter::convert(av[1]);
+		ScalarConverter::convert(av[1]);
 	}
 	catch(const std::exception& e) {
 		std::cerr << "Error: " << e.what() << std::endl;

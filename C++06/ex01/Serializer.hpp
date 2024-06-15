@@ -1,5 +1,5 @@
-#ifndef CONVERTER_HPP
-# define CONVERTER_HPP
+#ifndef SERIALIZER_HPP
+# define SERIALIZER_HPP
 
 #include <iostream>
 #include <stdint.h>
@@ -9,12 +9,12 @@ struct Data {
 	int			age;
 };
 
-class Converter {
+class Serializer {
 	private:
-		Converter();
-		Converter(const Converter &cpy);
-		Converter &operator=(const Converter &rhs);
-		~Converter();
+		Serializer();
+		Serializer(const Serializer &cpy);
+		Serializer &operator=(const Serializer &rhs);
+		~Serializer();
 
 	public:
 		static uintptr_t	serialize(Data *data);
