@@ -1,65 +1,60 @@
-#ifndef ARRAY_HPP
-#define ARRAY_HPP
-
-#include <iostream>
-#include <iomanip>
-#include <string>
-#include <cmath>
-#include <fstream>
-#include <stdexcept>
-#include <exception>
 
 template <typename T>
-class Array {
-private:
-	T *_tab;
-	unsigned int _n;
-
-protected:
-
-public:
-	Array() {
-		_n = 0;
-		_tab = NULL;
-		_tab = new T[_n];
-	}
-
-	Array(unsigned int n) {
-		_n = n;
-		_tab = NULL;
-		_tab = new T[n];
-	}
-
-	~Array() {}
-
-	Array(Array const &cpy) : _n(cpy._n) {
-		_tab = NULL;
-		*this = cpy;
-	}
-
-	Array &operator=(Array const &rhs) {
-		if (this != &rhs){
-			_n = rhs.size();
-			_tab = new T[_n];
-			_tab = rhs._tab;
-		}
-		return (*this);
-	}
-
-	unsigned int size() const {
-		return (_n);
+Array<T>::Array() {
+    m_size = 0;
+    m_array = new T[0];
 }
 
-	T &operator[](const unsigned int i) {
-		if (i >= _n)
-			throw Array::ExecutorException();
-		return (_tab[i]);
-	}
+template <typename T>
+Array<T>::Array(unsigned int size) {
+    m_size = size;
+    m_array = new T[size];
+    for (unsigned int i = 0; i < m_size; i++) {
+        m_array[i] = 0;
+    }
+}
 
-	class	ExecutorException : public std::exception {
-	public :
-		virtual const char* what() const throw();
-	};
-};
+template <typename T>
+Array<T>::Array(const Array& other) {
+    m_array = new T[other.size()];
+    m_size = other.size();
+    for (unsigned int i = 0; i < m_size; i++) {
+        m_array[i] = other[i];
+    }
+}
 
-#endif
+template <typename T>
+Array<T>::~Array() {
+    delete[] m_array;
+}
+template <typename T>
+Array<T>& Array<T>::operator=(const Array& other) {
+    delete[] m_array;
+    m_array = new T[other.size()];
+    m_size = other.size();
+    for (unsigned int i = 0; i < m_size; i++) {
+        m_array[i] = other[i];
+    }
+    return *this;
+}
+
+template <typename T>
+const T& Array<T>::operator[](unsigned int index) const {
+    if (index >= m_size) {
+        throw OutOfBoundsException();
+    }
+    return m_array[index];
+}
+
+template <typename T>
+T& Array<T>::operator[](unsigned int index) {
+    if (index >= m_size) {
+        throw OutOfBoundsException();
+    }
+    return m_array[index];
+}
+
+template <typename T>
+unsigned int Array<T>::size() const {
+    return m_size;
+}
