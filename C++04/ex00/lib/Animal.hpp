@@ -22,16 +22,3 @@ public:
 };
 
 #endif
-
-
-
-void ft1(int i)
-{
-	int res = i + 4;
-	return (res);
-}
-
-void ft1(char *str)
-{
-	printf("ici", str);
-}

@@ -13,16 +13,16 @@ private:
 
 public:
 	ClapTrap();									// Constructeur par défaut
-	ClapTrap(std::string Name);					// Constructeur string (Polymorphisme)
+	ClapTrap(std::string const Name);					// Constructeur string (Polymorphisme)
 	ClapTrap(const ClapTrap &cpy);				// Constructeur de copie
 	ClapTrap &operator=(ClapTrap const &rhs);	// Opérateur d'affectation
-	~ClapTrap();								// Destructeur
+	virtual ~ClapTrap();								// Destructeur
 
 	unsigned int getEnergyPoint() const;
 	unsigned int getHitPoint() const;
 	unsigned int getAttackDamage() const;
 
-	void	attack(const std::string& target);
+	const void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 };

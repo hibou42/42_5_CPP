@@ -13,8 +13,9 @@ public:
 	Cat &operator=(Cat const &rhs);	// Opérateur d'affectation
 	~Cat();							// Destructeur
 
+	void	makeSound() const;
+
 };
 
 #endif
 
-void	makeSound() const;
